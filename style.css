@@ -8,7 +8,6 @@ body {
     margin: 0;
 }
 
-
 h1 {
     margin-bottom: 20px;
     font-size: 24px;
@@ -17,7 +16,7 @@ h1 {
 
 input[type="text"], input[type="number"] {
     width: calc(100% - 20px);
-    padding: 0 10%%;
+    padding: 0 10px;
     margin: 10px;
     box-sizing: border-box;
     border: 1px solid #cccccc;
@@ -49,4 +48,47 @@ h2 {
 #result {
     font-weight: bold;
     color: #007bff;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hide {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    animation: fadeOut 0.3s ease forwards;
+}
+
+.show {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 700px;
+    box-sizing: border-box; 
+    overflow: auto; 
+}
+
+@media only screen and (max-width: 800px) {
+    .container {
+        max-width: 400px;
+    }
 }
