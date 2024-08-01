@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adjustable Base Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Adjustable Base Calculator</h1>
+
+        <div class="num1" style="display:flex; align-items:center;">
+            <label>Number:</label>
+            <input type="text" id="num1" placeholder="Enter first number">
+            <label>Base:</label>
+            <input type="number" id="base1" placeholder="Enter base of first number" min="2" max="36" value="10">
+        </div>
+        
+        <div id="num2-container" class="hide" style="display:flex; align-items:center;">
+            <label>Number:</label>
+            <input type="text" id="num2" placeholder="Enter second number">
+            <label>Base:</label>
+            <input type="number" id="base2" placeholder="Enter base of second number" min="2" max="36" value="10">
+        </div>
+
+        <div id="operation-container" class="hide">
+            <button onclick="calculate('add')">+</button>
+            <button onclick="calculate('subtract')">-</button>
+            <button onclick="calculate('multiply')">*</button>
+            <button onclick="calculate('divide')">/</button>
+        </div>
+        
+        <div id="ansbase-container" class="hide">
+            <label>Base of Answer:</label>
+            <input type="number" id="resultBase" placeholder="Enter base of result" min="2" max="36" value="36">
+        </div>
+        
+        <h2 id="result-container" class="hide">Result: <span id="result"></span></h2>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
