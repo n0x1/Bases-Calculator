@@ -1,3 +1,3 @@
-# Binary Calculator
+# Base Changing Calculator
 
-This is a simple calculator I wanted to make, but in binary and vanilla js as a challenge.
+This is a simple calculator I wanted to make, but accepting different bases and vanilla js as a challenge.
